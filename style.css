@@ -1,0 +1,90 @@
+/* reset and typography */
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+/* we aren't using it as unordered list anymore*/
+ul[class]{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* removing anchor link default underline*/
+nav a, .btn{
+    text-decoration:none
+}
+
+/* utility classes (this can be used multiple times by html elements)*/
+.flex{
+    display: flex;
+}
+/* for responsiveness (mobile / tablets, etc)*/
+@media (max-width:850px) {
+    .flex{
+        flex-direction: column;
+    }
+}
+.btn{
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: .5em 1.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: .5;
+}
+
+/* individual elements */
+header{
+    position: sticky;
+    top:0;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 5px 20px;
+}
+/* space between nav li elements*/
+nav ul {
+    gap: 2em;
+}
+
+
+/* changing anchor default color if set on parent*/
+a{
+    color: inherit;
+}
+a:hover{
+    opacity: .8;
+}
+
+/* changing size based on the image*/
+h1{
+    font-size:2.5em;
+    font-weight: normal;
+}
+
+section {
+    padding: 20px 30px 20px 20px;
+    gap: 5em;
+}
+
+img{
+    max-height: 85vh;
+}
+/* making it better on smaller screen (otherwise image is quashed)*/
+@media (max-width:850px) {
+    img{
+        max-height: 100%;
+    }
+}
+
